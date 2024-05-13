@@ -68,7 +68,7 @@ Widget tpExpanded() {
             margin: EdgeInsets.only(left: 8, bottom: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(),
+              border: Border.all(color: Colors.grey.shade500),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,19 +118,87 @@ Widget btExpanded() {
         Expanded(
             flex: 1,
             child: Container(
-              margin: EdgeInsets.only(right: 8, top: 8),
+              margin: const EdgeInsets.only(right: 8, top: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(),
+                border: Border.all(color: Colors.grey.shade500),
+              ),
+              padding: const EdgeInsets.only(left: 24, top: 24, bottom: 24),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    Icons.directions_walk,
+                    color: Colors.red,
+                  ),
+                  Spacer(),
+                  Text(
+                    "6550",
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Steps",
+                    style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Spacer(),
+                  Text(
+                    "Step",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             )),
         Expanded(
           flex: 1,
           child: Container(
-            margin: EdgeInsets.only(left: 8, top: 8),
+            margin: const EdgeInsets.only(left: 8, top: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(),
+              border: Border.all(color: Colors.grey.shade500),
+            ),
+            padding: const EdgeInsets.only(left: 24, top: 24, bottom: 24),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(
+                  Icons.local_drink,
+                  color: Colors.blue,
+                ),
+                Spacer(),
+                Text(
+                  "4",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "Cups",
+                  style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.grey,
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  "Water",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

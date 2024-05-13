@@ -53,23 +53,36 @@ class _mainPageState extends State<mainPage> {
                   bottomRight: Radius.circular(30),
                 ),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton(
-                          onPressed: () {}, icon: const Icon(Icons.menu)),
-                      const CircleAvatar(),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, top: 10),
+                        child: PopupMenuButton(
+                            child: Icon(
+                              Icons.menu,
+                              size: 27,
+                            ),
+                            itemBuilder: ((context) => [
+                                  const PopupMenuItem(child: Text("Page 2")),
+                                  const PopupMenuItem(child: Text("Page 3")),
+                                  const PopupMenuItem(child: Text("Page 4")),
+                                ])),
+                      ),
+                      const CircleAvatar(
+                        backgroundColor: Colors.black,
+                      ),
                     ],
                   ),
                   const SizedBox(
                     height: 32,
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(left: 8),
+                    padding: EdgeInsets.only(left: 8, bottom: 15),
                     child: Text(
                       "Activity",
                       style: TextStyle(
