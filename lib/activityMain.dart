@@ -24,25 +24,84 @@ Widget tpExpanded() {
               margin: EdgeInsets.only(right: 8, bottom: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(),
+                border: Border.all(color: Colors.grey.shade500),
               ),
-              child: Column(
+              padding: const EdgeInsets.only(left: 24, top: 24, bottom: 24),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
                     Icons.favorite_border,
                     color: Colors.red,
                   ),
-                  Text("Favorite")
+                  Spacer(),
+                  Text(
+                    "151",
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "bpm",
+                    style: TextStyle(
+                      fontSize: 19,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Spacer(),
+                  Text(
+                    "Heart rate",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
             )),
         Expanded(
           flex: 1,
           child: Container(
+            padding: const EdgeInsets.only(left: 24, top: 24, bottom: 24),
             margin: EdgeInsets.only(left: 8, bottom: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               border: Border.all(),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(
+                  Icons.whatshot,
+                  color: Colors.orange[500],
+                ),
+                const Spacer(),
+                const Text(
+                  "450",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  "Kcal",
+                  style: TextStyle(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.grey,
+                  ),
+                ),
+                const Spacer(),
+                const Text(
+                  "Calories",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),
